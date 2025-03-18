@@ -1,0 +1,115 @@
+Last login: Tue Mar 18 11:44:44 on ttys008
+➜  ~ git clone <lien_du_dépôt>
+cd <nom_du_répertoire>
+zsh: parse error near `\n'
+➜  ~ ls
+cat aritmetika.py functions.py
+python3 aritmetika.py
+Applications         VirtualBox VMs       node_modules
+Desktop              boucle.java          nrv
+Documents            conception bdd td    nvvv
+Downloads            css avancé projet    package-lock.json
+IdeaProjects         entrainement.java    package.json
+J.merise 5.mcd       exercices_js_basics  pharmacie
+J.merise.mcd         exo capi             sn ztr
+Library              fichier spider 1     td finall
+MRJFreeSoft          javascript           tp final final final
+Movies               javascript cours     tp phyton 09
+Music                javascriptexo 2      tp02.py
+Pictures             jeux video           tp1javapt2
+Public               landing.page1
+Simple.java          new turtle
+cat: aritmetika.py: No such file or directory
+cat: functions.py: No such file or directory
+/Library/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/Yassine_ABUBAKR/aritmetika.py': [Errno 2] No such file or directory
+➜  ~ echo "reponses-exo-2.md" > .gitignore
+echo "__pycache__/" >> .gitignore
+git add .gitignore
+git commit -m "Ajout du fichier .gitignore"
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+➜  ~ git tag version-1.0
+fatal: not a git repository (or any of the parent directories): .git
+➜  ~ git checkout -b feature-gcd
+fatal: not a git repository (or any of the parent directories): .git
+➜  ~ git checkout -b feature-gcd
+fatal: not a git repository (or any of the parent directories): .git
+➜  ~ def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+while> 
+while> git add functions.py
+git commit -m "Feature: gcd"
+while> >....                                                                    
+while True:
+    menu()
+    choice = input("Enter your choice (1-4): ")
+    if choice == '1':
+        num = int(input("Enter a number: "))
+        fact = factorial(num)
+        print("Factorial of", num, "is", fact)
+    elif choice == '2':
+        num = int(input("Enter a number: "))
+        if is_prime(num):
+            print(num, "is a prime number.")
+        else:
+            print(num, "is not a prime number.")
+    elif choice == '3':
+        a = int(input("Enter the first number: "))
+        b = int(input("Enter the second number: "))
+        gcd_value = gcd(a, b)
+        print("GCD of", a, "and", b, "is", gcd_value)
+    elif choice == '4':
+        print("Exiting the program...")
+        break
+    else:
+        print("Invalid choice. Please try again.")
+zsh: parse error near `elif'
+➜  ~ git add aritmetika.py
+git commit -m "Integration: gcd"
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+➜  ~ git add aritmetika.py
+git commit -m "Integration: gcd"
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+➜  ~ print("**Only supports integer input**")
+zsh: unknown file attribute: *
+➜  ~ git add aritmetika.py
+git commit -m "Bugfix: integer input only"
+git tag version-1.1
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+➜  ~ git checkout main
+git rebase bugfix
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+➜  ~ git checkout feature-gcd
+git checkout -b refactor-gcd
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+➜  ~ git merge bugfix -m "Merge bugfix in refactor-gcd"
+fatal: not a git repository (or any of the parent directories): .git
+➜  ~ git merge bugfix -m "Merge bugfix in refactor-gcd"
+fatal: not a git repository (or any of the parent directories): .git
+➜  ~ git checkout feature-gcd
+git rebase refactor-gcd
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+➜  ~ git checkout main
+git merge feature-gcd
+git tag version-2.0
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+➜  ~ sed -i '/reponses-exo-2.md/d' .gitignore
+git add .gitignore reponses-exo-2.md
+git commit -m "Réponses exercice 2"
+sed: 1: ".gitignore": invalid command code .
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+➜  ~ push origin main feature-gcd bugfix refactor-gcd --tags
+zsh: command not found: push
+➜  ~ 

@@ -1,0 +1,163 @@
+Last login: Tue Mar 18 11:43:52 on ttys008
+➜  ~ cd ~/Documents
+mkdir projet-git
+cd projet-git
+git init
+
+mkdir: projet-git: File exists
+Reinitialized existing Git repository in /Users/Yassine_ABUBAKR/Documents/projet-git/.git/
+➜  projet-git git:(branch-1) echo "Commit 0" > file.txt
+git add file.txt
+git commit -m "Commit 0"
+
+echo "Commit 1" >> file.txt
+git add file.txt
+git commit -m "Commit 1"
+
+[branch-1 3c15477] Commit 0
+ 1 file changed, 3 deletions(-)
+[branch-1 68ed448] Commit 1
+ 1 file changed, 1 insertion(+)
+➜  projet-git git:(branch-1) git checkout -b branch-1
+
+echo "Commit 2" >> file.txt
+git add file.txt
+git commit -m "Commit 2"
+
+echo "Commit 3" >> file.txt
+git add file.txt
+git commit -m "Commit 3"
+
+fatal: A branch named 'branch-1' already exists.
+[branch-1 004a0de] Commit 2
+ 1 file changed, 1 insertion(+)
+[branch-1 3721d61] Commit 3
+ 1 file changed, 1 insertion(+)
+➜  projet-git git:(branch-1) git checkout main
+
+echo "Commit 4" >> file.txt
+git add file.txt
+git commit -m "Commit 4"
+
+echo "Commit 5" >> file.txt
+git add file.txt
+git commit -m "Commit 5"
+
+error: pathspec 'main' did not match any file(s) known to git
+[branch-1 2f21a22] Commit 4
+ 1 file changed, 1 insertion(+)
+[branch-1 cea809a] Commit 5
+ 1 file changed, 1 insertion(+)
+➜  projet-git git:(branch-1) git merge branch-1 --no-ff -m "Commit 6 (Fusion de branch-1 dans main)"
+
+Already up to date.
+➜  projet-git git:(branch-1) git checkout -b branch-2
+
+echo "Commit 7" >> file.txt
+git add file.txt
+git commit -m "Commit 7"
+
+echo "Commit 8" >> file.txt
+git add file.txt
+git commit -m "Commit 8"
+
+Switched to a new branch 'branch-2'
+[branch-2 dcfe6b9] Commit 7
+ 1 file changed, 1 insertion(+)
+[branch-2 d40e2c2] Commit 8
+ 1 file changed, 1 insertion(+)
+                                                                                
+➜  projet-git git:(branch-1) 
+➜  projet-git git:(branch-2) git checkout branch-2
+
+echo "Commit 9" >> file.txt
+git add file.txt
+git commit -m "Commit 9"
+
+echo "Commit 10" >> file.txt
+git add file.txt
+git commit -m "Commit 10"
+
+Already on 'branch-2'
+[branch-2 0484e44] Commit 9
+ 1 file changed, 1 insertion(+)
+[branch-2 0394936] Commit 10
+ 1 file changed, 1 insertion(+)
+➜  projet-git git:(branch-2) git checkout branch-2
+git rebase --onto main main~2 branch-2
+
+Already on 'branch-2'
+fatal: invalid upstream 'main~2'
+➜  projet-git git:(branch-2) git checkout main
+git merge branch-2 --ff-only
+
+error: pathspec 'main' did not match any file(s) known to git
+Already up to date.
+➜  projet-git git:(branch-2) echo "!reponses-exo-1.md" >> .gitignore
+git add reponses-exo-1.md
+git commit -m "Réponses exercice 1"
+
+zsh: event not found: reponses
+➜  projet-git git:(branch-2) git remote add origin <URL_GITHUB>
+git push -u origin main
+
+zsh: parse error near `\n'
+➜  projet-git git:(branch-2) git log --oneline --graph --all
+
+
+* 0394936 (HEAD -> branch-2) Commit 10
+* 0484e44 Commit 9
+* d40e2c2 Commit 8
+* dcfe6b9 Commit 7
+* cea809a (branch-1) Commit 5
+* 2f21a22 Commit 4
+* 3721d61 Commit 3
+* 004a0de Commit 2
+* 68ed448 Commit 1
+* 3c15477 Commit 0
+* 3a9465f Commit 3
+* 1a4bce8 Commit 2
+* 4cc17ff (master) Commit 1
+* 0c04d76 Commit 0
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+(END)
